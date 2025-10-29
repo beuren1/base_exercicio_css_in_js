@@ -1,31 +1,30 @@
-import styles from './Vaga.module.css'
+import { Vaga } from '../../types/vaga';
+import * as S from './styles';
 
-type Props = {
-  titulo: string
-  localizacao: string
-  nivel: string
-  modalidade: string
-  salarioMin: number
-  salarioMax: number
-  requisitos: string[]
+type Props = { vaga: Vaga };
+
+export default function VagaCard({ vaga }: Props) {
+  const { titulo, localizacao, nivel, modalidade, salarioMin, salarioMax, requisitos } = vaga;
+
+  const salarioFmt = new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' });
+
+  return (
+    <S.Card>
+      <S.Title>{titulo}</S.Title>
+      <S.Meta>
+        {localizacao} • {nivel} • {modalidade}
+      </S.Meta>
+      <S.Meta>
+        Faixa: {salarioFmt.format(salarioMin)} – {salarioFmt.format(salarioMax)}
+      </S.Meta>
+
+      {requisitos?.length ? (
+        <S.Tags aria-label="Requisitos da vaga">
+          {requisitos.map((r) => (
+            <li key={r}>{r}</li>
+          ))}
+        </S.Tags>
+      ) : null}
+    </S.Card>
+  );
 }
-
-const Vaga = (props: Props) => (
-  <li className={styles.vaga}>
-    <h3 className={styles.vagaTitulo}>{props.titulo}</h3>
-    <ul>
-      <li>Localizacao: {props.localizacao}</li>
-      <li>Senioridade: {props.nivel}</li>
-      <li>Tipo de contratacao: {props.modalidade}</li>
-      <li>
-        Salário: {props.salarioMin} - {props.salarioMax}
-      </li>
-      <li>Requisitos: {props.requisitos.join(', ')}</li>
-    </ul>
-    <a className={styles.vagaLink} href="#">
-      Ver detalhes e candidatar-se
-    </a>
-  </li>
-)
-
-export default Vaga

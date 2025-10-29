@@ -1,0 +1,92 @@
+[
+  {
+    "id": "1",
+    "titulo": "Desenvolvedor Front-end",
+    "localizacao": "Remoto - BR",
+    "nivel": "Júnior",
+    "modalidade": "CLT",
+    "salarioMin": 3500,
+    "salarioMax": 5500,
+    "requisitos": ["HTML", "CSS/SCSS", "JavaScript", "React"]
+  },
+  {
+    "id": "2",
+    "titulo": "Desenvolvedor Full Stack",
+    "localizacao": "São Paulo - SP",
+    "nivel": "Pleno",
+    "modalidade": "PJ",
+    "salarioMin": 8000,
+    "salarioMax": 12000,
+    "requisitos": ["Node.js", "React", "PostgreSQL", "Docker"]
+  },
+  {
+    "id": "3",
+    "titulo": "UX/UI Designer",
+    "localizacao": "Remoto - BR",
+    "nivel": "Sênior",
+    "modalidade": "CLT",
+    "salarioMin": 10000,
+    "salarioMax": 15000,
+    "requisitos": ["Figma", "Design System", "Prototipação"]
+  },
+  {
+    "id": "4",
+    "titulo": "Desenvolvedor Back-end Node.js",
+    "localizacao": "Belo Horizonte - MG",
+    "nivel": "Pleno",
+    "modalidade": "CLT",
+    "salarioMin": 8000,
+    "salarioMax": 11000,
+    "requisitos": ["Node.js", "TypeScript", "Express", "MongoDB", "Redis", "Docker"]
+  },
+  {
+    "id": "5",
+    "titulo": "DevOps Engineer",
+    "localizacao": "Remoto - BR",
+    "nivel": "Sênior",
+    "modalidade": "PJ",
+    "salarioMin": 14000,
+    "salarioMax": 20000,
+    "requisitos": ["AWS", "Kubernetes", "Terraform", "CI/CD", "Linux", "Observability"]
+  },
+  {
+    "id": "6",
+    "titulo": "QA Engineer (Automação)",
+    "localizacao": "Curitiba - PR",
+    "nivel": "Pleno",
+    "modalidade": "CLT",
+    "salarioMin": 7000,
+    "salarioMax": 10000,
+    "requisitos": ["Cypress", "Playwright", "Jest", "GitHub Actions", "Testes E2E", "BDD"]
+  },
+  {
+    "id": "7",
+    "titulo": "Mobile Developer (React Native)",
+    "localizacao": "Remoto - BR",
+    "nivel": "Pleno",
+    "modalidade": "PJ",
+    "salarioMin": 9000,
+    "salarioMax": 13000,
+    "requisitos": ["React Native", "TypeScript", "Expo", "REST", "Firebase", "App Store/Play"]
+  },
+  {
+    "id": "8",
+    "titulo": "Data Scientist",
+    "localizacao": "São Paulo - SP",
+    "nivel": "Sênior",
+    "modalidade": "CLT",
+    "salarioMin": 15000,
+    "salarioMax": 22000,
+    "requisitos": ["Python", "Pandas", "Scikit-learn", "SQL", "Airflow", "Machine Learning"]
+  },
+  {
+    "id": "9",
+    "titulo": "Product Manager (Tech)",
+    "localizacao": "Rio de Janeiro - RJ",
+    "nivel": "Pleno",
+    "modalidade": "CLT",
+    "salarioMin": 12000,
+    "salarioMax": 17000,
+    "requisitos": ["Discovery", "Roadmap", "Métricas (AARRR)", "Analytics", "UX", "Stakeholders"]
+  }
+]
