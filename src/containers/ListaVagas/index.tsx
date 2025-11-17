@@ -1,11 +1,10 @@
 import { useState } from 'react'
 import FormVagas from '../../components/FormVagas'
-
 import Vaga from '../../components/Vaga'
 
-import styles from './ListaVagas.module.css'
+import { Lista } from './styles'
 
-type Vaga = {
+type VagaTipo = {
   id: string
   titulo: string
   localizacao: string
@@ -16,9 +15,9 @@ type Vaga = {
   requisitos: string[]
 }
 
-const vagas = [
+const vagas: VagaTipo[] = [
   {
-    id: 1,
+    id: '1',
     titulo: 'Desenvolvedor front-end',
     localizacao: 'remoto',
     nivel: 'junior',
@@ -28,37 +27,37 @@ const vagas = [
     requisitos: ['HTML', 'CSS', 'JavaScript', 'jQuery']
   },
   {
-    id: 2,
+    id: '2',
     titulo: 'Desenvolvedor NodeJS',
     localizacao: 'remoto',
     nivel: 'pleno',
     modalidade: 'pj',
     salarioMin: 5000,
-    salarioMax: 6500,
-    requisitos: ['HTML', 'CSS', 'JavaScript', 'jQuery']
+    salarioMax: 8000,
+    requisitos: ['NodeJS', 'Express', 'MongoDB']
   },
   {
-    id: 3,
-    titulo: 'Desenvolvedor fullstack',
-    localizacao: 'remoto',
+    id: '3',
+    titulo: 'UX Designer',
+    localizacao: 'São Paulo/SP',
     nivel: 'pleno',
-    modalidade: 'pj',
-    salarioMin: 4000,
-    salarioMax: 6000,
-    requisitos: ['HTML', 'CSS', 'JavaScript', 'jQuery']
-  },
-  {
-    id: 4,
-    titulo: 'Designer de interfaces',
-    localizacao: 'remoto',
-    nivel: 'junior',
     modalidade: 'clt',
     salarioMin: 4000,
-    salarioMax: 5000,
-    requisitos: ['HTML', 'CSS', 'JavaScript', 'jQuery']
+    salarioMax: 6000,
+    requisitos: ['Figma', 'Prototipação', 'Pesquisa com usuários']
   },
   {
-    id: 5,
+    id: '4',
+    titulo: 'Desenvolvedor fullstack',
+    localizacao: 'remoto',
+    nivel: 'senior',
+    modalidade: 'pj',
+    salarioMin: 8000,
+    salarioMax: 12000,
+    requisitos: ['React', 'NodeJS', 'TypeScript']
+  },
+  {
+    id: '5',
     titulo: 'Desenvolvedor front-end',
     localizacao: 'remoto',
     nivel: 'senior',
@@ -68,17 +67,17 @@ const vagas = [
     requisitos: ['HTML', 'CSS', 'JavaScript', 'jQuery']
   },
   {
-    id: 6,
-    titulo: 'Desenvolvedor front-end para projeto internacional',
-    localizacao: 'remoto',
-    nivel: 'senior',
-    modalidade: 'pj',
-    salarioMin: 12000,
-    salarioMax: 15000,
-    requisitos: ['HTML', 'CSS', 'JavaScript', 'jQuery']
+    id: '6',
+    titulo: 'Desenvolvedor front-end',
+    localizacao: 'Rio de Janeiro/RJ',
+    nivel: 'pleno',
+    modalidade: 'clt',
+    salarioMin: 5000,
+    salarioMax: 7000,
+    requisitos: ['HTML', 'CSS', 'JavaScript', 'React']
   },
   {
-    id: 7,
+    id: '7',
     titulo: 'Desenvolvedor front-end',
     localizacao: 'São Paulo/SP',
     nivel: 'junior',
@@ -99,7 +98,7 @@ const ListaVagas = () => {
   return (
     <div>
       <FormVagas aoPesquisar={(termo: string) => setFiltro(termo)} />
-      <ul className={styles.vagas}>
+      <Lista>
         {vagasFiltradas.map((vag) => (
           <Vaga
             key={vag.id}
@@ -112,7 +111,7 @@ const ListaVagas = () => {
             requisitos={vag.requisitos}
           />
         ))}
-      </ul>
+      </Lista>
     </div>
   )
 }
